@@ -1,0 +1,119 @@
+\subsection{Tensor products}
+\begin{exer}
+	Let $\{ M_i \}_{i \in I},\{ N_j \}_{j \in J}$ be two families of modules
+	over a ring $A$. Then
+	\[
+		(\oplus_{i \in I} M_i) \otimes_A (\oplus_{j \in J} N_j)
+		\cong \oplus_{(i,j) \in I \times J} (M_i \otimes_A N_j).
+	\]
+\end{exer}
+\begin{proof}
+	There is a chain of natural isomorphisms:
+	\begin{align*}
+		&(\oplus_{i \in I} M_i) \otimes_A (\oplus_{j \in J} N_j)\\
+		\cong&\oplus_{i \in I} (M_i \otimes_A (\oplus_{j \in J} N_j))\\
+		\cong&\oplus_{j \in J}\oplus_{i \in I} (M_i \otimes_A N_j)\\
+		\cong&\oplus_{(i,j) \in I \times J} (M_i \otimes_A N_j).
+	\end{align*}
+\end{proof}
+
+\begin{exer}
+	There is a unique $A$-linear map
+	\[
+		f: \Hom_A(M,M') \otimes_A \Hom_A(N,N') \to
+		\Hom_A(M \otimes_A N,M' \otimes_A N')
+	\]
+	such that $f(u \otimes v) = u \otimes v$.
+\end{exer}
+
+\begin{proof}
+	Consider the map $g:\Hom_A(M,M') \times \Hom_A(N,N') \to
+		\Hom_A(M \otimes_A N,M' \otimes_A N')$ sending $(u,v)$ to
+	$u \otimes v$. It is clearly bilinear, so factors uniquely through
+	$\Hom_A(M,M') \otimes_A \Hom_A(N,N')$.
+\end{proof}
+
+\begin{exer}
+	Let $M,N$ be $A$-modules and let $i:M' \to M, j:N' \to N$ be submodules
+	of $M$ and $N$, respectively. Then there is a canonical isomorphism
+	\[
+		(M/M') \otimes_A (N/N')
+		\cong (M \otimes_A N)/(\Im i_N + \Im j_N).
+	\]
+	In particular, $(\ZZ/n\ZZ)\otimes_{\ZZ} (\ZZ/m\ZZ) = \ZZ/l \ZZ$, where
+	$l=\gcd(m,n)$.
+\end{exer}
+
+\begin{proof}
+	Observe that
+	\[
+		(M \otimes_A N)/(\Im i_N + \Im j_N)
+		\cong ((M \otimes_A N)/(\Im i_N))/(\Im j_{M/M'}),
+	\]
+	so Corollary 1.13 gives us a chain of isomorphisms
+	\begin{align*}
+		&((M \otimes_A N)/(\Im i_N))/(\Im j_{M/M'})\\
+		\cong&((M/M') \otimes_A N)/(\Im j_{M/M'})\\
+		\cong&(M/M') \otimes_A (N/N').
+	\end{align*}
+	For the last statement, just recall that $(m)+(n)=(l)$.
+\end{proof}
+
+\begin{exer}
+	Let $M,N$ be $A$-modules and let $B,C$ be $A$-algebras.
+	\begin{enumerate}[label=(\alph*)]
+		\item If $M$ and $N$ are finitely generated over $A$, then so is
+			$M \otimes_A N$.
+		\item If $B$ and $C$ are finitely generated over $A$, then so is
+			$B \otimes_A C$.
+		\item The converses of (a) and (b) are in general false.
+	\end{enumerate}
+\end{exer}
+\begin{proof}
+	Parts (a) and (b) are obvious. For part (c), just notice that
+	$\QQ \otimes_{\ZZ} \ZZ/2\ZZ$ is the zero ring,
+	but $\QQ$ is not finitely generated over $\ZZ$.
+\end{proof}
+
+\begin{exer}
+	Let $\rho: A \to B$ be a ring homomorphism, $M$ an $A$-module, and $N$
+	a $B$-module. There is a canonical isomorphism of $A$-modules
+	\[
+		\Hom_A(M,\rho_*N) \cong \Hom_B(\rho^*M,N).
+	\]
+\end{exer}
+\begin{proof}
+	Let $f: \Hom_A(M,\rho_*N) \to \Hom_B(\rho^*M,N)$ be the map sending $u$
+	to the map $f(u)$ s.t. $f(u)(m \otimes b) = bu(m)$. This is well-defined
+	because if $n \otimes c = m \otimes b$, we may assume that there is some
+	$a\in A$ s.t. $an = m$ and $\rho(a)b = c$ and so 
+	$f(u)(n \otimes c) = cu(n) = \rho(a)bu(n) = bu(m)$.\\
+
+	In addition, define
+	$g: \Hom_B(\rho^*M,N) \to \Hom_A(M,\rho_*N)$ to be the map s.t.
+	$g(u)(m) = u(m \otimes 1)$. This is immediately seen to be well-defined,
+	and we contest that this is an inverse for $f$. Indeed, 
+	$f(g(u))(m \otimes b) = bg(u)(m) = bu(m \otimes 1) = u(m \otimes b)$ and
+	$g(f(u))(m) = f(u)(m \otimes 1) = u(m)$.
+\end{proof}
+
+\begin{exer}
+	Let $(N_i)_{i\in I}$ be a direct system of modules. Then for any
+	$A$-module $M$, there exists a canonical isomorphism
+	$\varinjlim (N_i \otimes_A M) \cong (\varinjlim N_i) \otimes_A M$.
+\end{exer}
+\begin{proof}
+	Tensor-hom.\\
+
+	Just kidding, it follows from the fact that $\varinjlim (N_i \times M)$
+	is canonically isomorphic to $(\varinjlim N_i) \times M$, and that a
+	bilinear map over the latter must then induce a cocone of bilinear maps.
+\end{proof}
+
+\begin{exer}
+	Let $B$ be an $A$-algebra, and let $M,N$ be $B$-modules. Then there
+	exists a canonical surjection $M \otimes_A N \to M \otimes_B N$.
+\end{exer}
+\begin{proof}
+	Do I really need to spell it out?
+\end{proof}

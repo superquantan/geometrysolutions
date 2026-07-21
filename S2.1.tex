@@ -1,0 +1,44 @@
+\subsection{Spectrum of a ring}
+\begin{exer}
+	For $k$ a field, $\Spec (k[[T]])$ is the space $\{ \xi, 0 \}$ with
+	generic point $\xi$ and closed point $0$.
+\end{exer}
+\begin{proof}
+	It is easy to see that any power series with a non-zero constant term is
+	a unit. Furthermore, if we have $f = \sum a_nT^n$ with $a_N = 1$ for
+	some $N$ and $a_n = 0$ whenever $n \leq N$, then we can pull out a
+	common factor of $T^N$. We see that $f$ is then a unit multiple of $T^N$
+	and $(f) = (T^N)$. Clearly, this is only prime when $N = 1$. It is easy
+	to see that $k[[T]]$ is an entire ring, so the proposition is immediate.
+\end{proof}
+
+\begin{exer}
+	Let $\varphi: A \to B$ be a homomorphism of finitely generated algebras
+	over a field $k$. The image of a closed point under $\Spec \varphi$ is 
+	a closed point.
+\end{exer}
+\begin{proof}
+	Observe that $\varphi$ factors as
+	\[
+		A \xrightarrow{} A/\Ker \varphi \xrightarrow{} \Im \varphi
+		\xrightarrow{} B.
+	\]
+	Obviously, the first arrow satisfies the conditions, so we may assume
+	$\varphi$ injective. If $Spec \varphi$ takes the maximal ideal
+	$\mathfrak m$ into the ideal $\mathfrak p$, we get a diagram
+	\[
+		k \xrightarrow{} A/\mathfrak p \xrightarrow{\widetilde{\varphi}}
+		B/\mathfrak m.
+	\]
+	By Corollary 1.12, $B/\mathfrak m$ is a finite algebraic extension of
+	$k$, so $B/\mathfrak m$ (resp. $A/\mathfrak p$) is finite over
+	$A/\mathfrak p$ (resp. $k$). It then suffices to prove that
+	$A/\mathfrak p$ is a field. Indeed, any $a\in A$ has an associated
+	irreducible polynomial $P = \sum a_i X^i \in k[x]$ such that $P(a) = 0$.
+	This polynomial must have a nonzero constant term, so we have
+	\[
+		-\frac {1}{a_0} \sum_{i > 0} a_i a^i = 1,
+	\]
+	but the polynomial on the left has no constant term and we can pull out
+	a factor of $a$. Thus, $a$ is a unit and $A/\mathfrak p$ is a field.
+\end{proof}
