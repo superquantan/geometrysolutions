@@ -1,2 +1,29 @@
 \subsection{Flatness}
 
+\begin{exer}
+	Let $M$ be an $A$-module and let $I \subseteq \Ann(m)$ be an ideal.
+	\begin{enumerate}[label=(\alph*)]
+		\item There is a natural $A/I$-module structure on $M$, and
+		$M \cong M \otimes_A A/I$.
+		\item Let $N$ be another $A$-module such that
+		$I \subseteq \Ann(N)$. The canonical homomorphism
+		$M \otimes_A N \to M \otimes_{A/I} N$ is an isomorphism.
+	\end{enumerate}	
+\end{exer}
+\begin{proof}
+	For (a), observe that if $x \in I$, then $am = (a + x)m$ for any
+	$a \in A$ and $m \in M$. This implies that the multiplication of
+	elements of $M$ by cosets $a + I$ is well defined, hence we have an
+	$A/I$-module structure on $M$. To see that this is the extension of
+	scalars, recall that $M \otimes_A A/I \cong M/(IM),$ which is just $M$.
+	\\
+
+	Part $(b)$ follows from a chain of isomorphisms
+	\begin{align*}
+		& M \otimes_A N\\
+		\cong & (M \otimes_A A/I) \otimes_{A/I} N\\
+		\cong & M \otimes_{A/I} N,
+	\end{align*}
+	where the first isomorphism comes from Corollary 1.11 and the second
+	comes from part (a).
+\end{proof}
