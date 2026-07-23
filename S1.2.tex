@@ -27,3 +27,25 @@
 	where the first isomorphism comes from Corollary 1.11 and the second
 	comes from part (a).
 \end{proof}
+
+\begin{exer}
+	Let $\rho: A \to B$ be a ring homomorphism, $S$ a multiplicative subset
+	of $A$, and $T = \rho(S)$. Then $T$ is a multiplicative subset of $B$,
+	and $T^{-1}B \cong B \otimes_A S^{-1}A$.
+\end{exer}
+\begin{proof}
+	The first part is obvious. To see the last statement, let
+	$\iota: B \to T^{-1}B$ be the canonical embedding. Since $\iota$ sends
+	elements of $T = \rho(S)$ to units, there is a canonical homomorphism
+	$\phi: S^{-1}A \to T^{-1}B$. Since $\otimes_A$ is a pushout in the
+	category of $A$-algebras, there is a unique homomorphism
+	$B \otimes_A S^{-1}A \to T^{-1}B$ such that this diagram commutes:
+	\[
+	\begin{tikzcd}
+		S^{-1}A \otimes B \arrow[dr, dotted] & S^{-1}A \arrow[l] 
+			\arrow[d]\\
+		B \arrow[u] \arrow[r] & T^{-1}B.
+	\end{tikzcd}
+	\]
+	This is an isomorphism because of universal property of localizations.
+\end{proof}
