@@ -95,3 +95,38 @@
 	equation with constant term $a_1$. This repeats indefinitely and so
 	$g = 0$.
 \end{proof}
+
+\begin{exer}
+	Let $A$ be a ring.
+	\begin{enumerate}[label=(\alph*)]
+		\item Let $\mathfrak p$ be a minimal prime ideal of $A$. Then
+			$\mathfrak pA_{\mathfrak p}$ is nilpotent. In
+			particular, every element of $\mathfrak p$ is a
+			zero divisor.
+		\item If $A$ is reduced, then any zero divisor in $A$ is an
+			element of a minimal prime ideal. This is not true in
+			general if $A$ is not reduced.
+	\end{enumerate}
+\end{exer}
+\begin{proof}
+	For (a), notice that $I = \mathfrak pA_\mathfrak p$ is the only prime
+	ideal in $B = A_\mathfrak p$, so $I = \Nil(B)$. It is easy to see that
+	the radical of any principal ideal $(x) \subseteq B$ with $x \in I$ is
+	itself just $I$, so the powers of any element $x \in I$ give $I$ and
+	$I$ is finite. The second part of (a) is obvious.\\
+
+	For (b), let $x$ be any zero divisor and let $\mathfrak p$ be a prime
+	ideal minimal among those that contain $x$. If $\mathfrak p$ is minimal,
+	we are done. Otherwise, suppose that $\mathfrak q \subset \mathfrak p$
+	is a minimal prime ideal not containing $x$. Since $A$ is reduced, we
+	must have $\sqrt{(x)} \cap \Ann(x) = \{ 0 \}$, so $\mathfrak q$ must
+	contain a nonzero element $x' \in \Ann(x)$. Localizing by $\mathfrak q$,
+	we see that $x$ is sent to $0$ and $x'$ is sent to a nilpotent. This
+	implies that there is some positive integer $n$ and some element
+	$s \in A \setminus \mathfrak q$ such that $s(x'^n-x) = 0$, and it is
+	easy to see that this means that $sx^2 = 0 \in \mathfrak q$, so 
+	$x^2 \in \mathfrak q$, contradiction.
+\end{proof}
+The fact that this is false for $A$ not reduced comes is immediate from the fact
+that there can be non-nilpotent zero divisors in a ring.\\
+
