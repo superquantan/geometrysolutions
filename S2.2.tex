@@ -1,0 +1,25 @@
+\subsection{Ringed topological spaces}
+	
+Let $X$ be a topological space.
+
+\begin{exer}
+	Let $A$ be a non-trivial abelian group and let $\mathcal A_X$ be the
+	constant presheaf of $A$ on $X$. The associated sheaf
+	$\mathcal A_X^\dagger$ is the sheaf of locally constant functions valued
+	in $A$. In particular, $\mathcal A_X$ is a sheaf if and only if every
+	non-empty open subset of $X$ is connected.
+\end{exer}
+\begin{proof}
+	Let $\mathcal F$ be the sheaf of locally constant $A$-valued functions
+	on $X$ and let $\varphi: \mathcal A_X \to \mathcal F$ be the evident
+	morphism. It is easy to see that the stalks of $\mathcal F$ are all $A$.
+	Let $\mathcal G$ be any sheaf and let $\alpha: \mathcal A_X \to
+	\mathcal G$ be any morphism. If $f$ is a locally constant function on
+	$U$, we may split $U$ into disjoint open sets $U_a = f^{-1}(a)$ for
+	$a \in f(U)$. We define $\widetilde{\alpha}(U) : \mathcal F \to
+	\mathcal G$ to be the map sending $f$ to the regluing of the sections
+	$\alpha(U)(a)|_{U_a}$. It is easy to see that this defines a morphism
+	of sheaves and that $\widetilde{\alpha} \circ \varphi = \alpha$. Since
+	$\varphi$ is surjective, $\widetilde{\alpha}$ is the unique such
+	morphism.
+\end{proof}
