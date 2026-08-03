@@ -153,3 +153,22 @@ that there can be non-nilpotent zero divisors in a ring.\\
 	generators $(P_1,\ldots,P_n)$ for $\mathfrak m$, and it is easy to see
 	that the desired properties hold.
 \end{proof}
+
+\begin{exer}
+	Any closed subspace of a quasicompact space is itself quasicompact.
+	If $A$ is a ring, $\Spec(A)$ is quasicompact.
+\end{exer}
+\begin{proof}
+	Let $X$ be a topological space and let $Y \subseteq X$ be any closed
+	subset. If $\{ U_i \}$ is an open covering of $Y$, 
+	$\{ U_i \cup \complement_X Y \}$ is an open covering of $X$. Taking a
+	finite subcovering of this extended covering yields a finite subcovering
+	of the original covering.\\
+
+	For the second statement, suppose that $\{ U_i \}$ is an open covering
+	of $X = \Spec A$. For each $i$, let $J_i$ be the ideal such that
+	$\complement_X U_i = V(J_i)$. We see that $\emptyset = \bigcap V(J_i) 
+	= V(\sum J_i)$, so there is a finite family of $f_k \in J_k$ such that
+	$\sum f_k = 1$. Then $\sum J_k = 1$ and $\{ U_k \}$ is a finite
+	subcovering.
+\end{proof}
