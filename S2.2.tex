@@ -68,3 +68,23 @@ Let $X$ be a topological space.
 
 	Part (c) is quite nasty to write out so I won't do it.
 \end{proof}
+
+\begin{exer}
+	Let $0 \to \mathcal F' \to \mathcal F \to \mathcal F''$ be an exact
+	sequence of sheaves on $X$. Then the sequence of abelian groups
+	$0 \to \mathcal F'(X) \to \mathcal F(X) \to \mathcal F''(X)$ is exact.
+\end{exer}
+\begin{proof}
+	This follows from the exact sequence induced on stalks.
+\end{proof}
+
+\begin{exer}
+	Fix a sheaf $\mathcal G$ on $X$ and a closed
+	point $x_0 \in X$. Define a presheaf $\mathcal F$ by $\mathcal F(U) =
+	\mathcal G(U)$ if $x_0 \not\in U$ and $\mathcal F(U) = \{ s \in
+	\mathcal G(U) : s_{x_0} = 0 \}$ otherwise. Then $\mathcal F$ is a sheaf
+	and $\Supp \mathcal F = \Supp \mathcal G \setminus \{ x_0 \}$.
+\end{exer}
+\begin{proof}
+	I think I'm missing something because this seems really immediate
+\end{proof}
