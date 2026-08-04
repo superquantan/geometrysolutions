@@ -33,3 +33,38 @@ Let $X$ be a topological space.
 	$U_x$ of $x$ such that $s_y = t_y$ for all $y \in U_x$. Taking the union
 	of all such $U_x$ gives the result.
 \end{proof}
+
+\begin{exer}
+	Let $X$ be a fixed topological space. Let $\mathcal F$ be a presheaf on
+	$X$. We keep the notation introduced just before Lemma 2.7.
+	\begin{enumerate}[label=(\alph*)]
+		\item Let $\mathcal U = \{ U_i \}$ be an open covering of $X$.
+			Let ${\cal F_U}(X) = \Ker d_1$. For any open subset $W$
+			of $X$, we define in the same way a group
+			${\cal F_U}(W)$ relative to the covering
+			$\{ W \cap U_i \}$ of $W$. Then ${\cal F_U}$ is a
+			presheaf on $X$ and we have a morphism of presheaves
+			$\mathcal F \to {\cal F_U}$.
+		\item Let $\mathcal V = \{ V_j \}$ be another open covering of
+			$X$. We define a partial ordering: $\mathcal V \preceq
+			\mathcal U$ if $\mathcal V$ is finer than $\mathcal U$.
+			Then there is a canonical homomorphism ${\cal F_U}(W)
+			\to {\cal F_V(W)}$ for every open subset $W$ if
+			$\mathcal V \preceq \mathcal U$.
+		\item The ordering $\preceq$ makes the set of open coverings of
+			$X$ into a direct system. Let
+			\[
+				\mathcal F'(W) =
+					\varinjlim_{\mathcal V} {\cal F_V}(W),
+			\]
+			the direct limit being taken over the open coverings of
+			$W$. Then $(\mathcal F')'$ is the sheaf associated to
+			$\mathcal F$.
+	\end{enumerate}
+\end{exer}
+\begin{proof}
+	Part (a) is clear. The homomorphisms in part (b) are given by the
+	resrictions in the natural way.\\
+
+	Part (c) is quite nasty to write out so I won't do it.
+\end{proof}
