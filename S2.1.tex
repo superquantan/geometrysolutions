@@ -191,3 +191,36 @@ changed to reflect that.
 	not all principal follows from the fact that the maximal ideals have
 	2 generators.
 \end{proof}
+
+\begin{exer}
+	Let $\varphi : A \to B$ be an integral homomorphism.
+	\begin{enumerate}[label=(\alph*)]
+		\item The map $\Spec \varphi: \Spec B \to \Spec A$ sends closed
+			points to closed points, and any point in the preimage
+			of a closed point is also a closed point.
+		\item Let $\mathfrak p \in \Spec A$. The canonical homomorphism
+			$A_\mathfrak p \to B \otimes_A A_\mathfrak p$ is
+			integral.
+		\item Let $T = \varphi(A \setminus \mathfrak p)$ and suppose
+			that $\varphi$ is injective. Then $T$ is a
+			multiplicative subset of $B$ and $B \otimes_A
+			A_\mathfrak p = T^{-1}B \neq 0$. In particular,
+			$\Spec \varphi$ is surjective if $\varphi$ is integral
+			and injective.
+	\end{enumerate}
+\end{exer}
+\begin{proof}
+	For part (a), suppose that $\mathfrak m$ is a closed point of $\Spec B$ 	and let $\varphi^{-1}(\mathfrak m) = \mathfrak m'$. Then we have
+	an integral homomorphism $A/\mathfrak m' \hookrightarrow B/\mathfrak m$.
+	Given $a \in A/\mathfrak m'$, the inverse $b \in B/\mathfrak m$ of its
+	image under $\varphi$ satisfies an integral equation
+	$a_0 + a_1b + \ldots + b^n = 0$. Multiplying by an appropriate power of
+	$a$, we have $a_0a^n + \ldots + 1 = 0$, so $a$ is a unit. On the other
+	hand, let $\mathfrak m$ be a closed point of $\Spec A$ and suppose that
+	$\varphi(\mathfrak m) \subseteq \mathfrak m'$ for some $\mathfrak m' \in
+	\Spec B$. Again, we have an integral homomorphism $A/\mathfrak m 
+	\hookrightarrow B/\mathfrak m'$. Since $A/\mathfrak m$ is a field, this
+	is an algebraic extension.\\
+
+	Parts (b) and (c) are easy, but somewhat annoying to write out.
+\end{proof}
