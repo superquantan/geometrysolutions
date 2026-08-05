@@ -1,0 +1,86 @@
+\subsection{Schemes}
+
+\begin{exer}
+	Let $X$ be an open subscheme of an affine scheme $Y$. The canonical
+	morphism $X \to Y$ corresponds by the map $\rho$ of Proposition 25 to
+	the restriction $\Sh_Y(Y) \to \Sh_X(X)$.
+\end{exer}
+\begin{proof}
+	In the case where $X$ is a principal open subset, this is just Lemma
+	3.7. Otherwise, suppose that $X = \bigcup D(f_i)$ for some family of
+	elements $f_i \in \Sh_Y(Y)$. The inclusions induce a family of maps
+	$\Sh_Y(Y) \to \Sh_X(D(f_i)) = \Sh_X(X)_{f_i}$ which clearly agree on the
+	intersections. Gluing these gives the restriction.
+\end{proof}
+
+\begin{exer}
+	Let $U = \Spec B$ be an affine open subscheme of $X = \Spec A$. Then the
+	restriction $A \to B$ is flat.
+\end{exer}
+\begin{proof}
+	Since the restriction corresponds to the open immersion $U
+	\hookrightarrow X$, we see that its localization $A_x \to B_x$ is an
+	isomorphism, which is flat, for every $x \in \Spec B$. 
+\end{proof}
+
+\begin{exer} \leavevmode
+	\begin{enumerate}[label=(\alph*)]
+		\item Let $F$ be a subset of an affine scheme $\Spec A$. The
+			closure $\overline F$ of $F$ in $\Spec A$ is equal to
+			$V(I)$, where $I = \bigcap_{\mathfrak p \in F}
+			\mathfrak p$.
+		\item Let $\varphi: A \to B$ be a ring homomorphism. Let $f:
+			\Spec B \to \Spec A$ be the morphism of schemes
+			associated to $\varphi$. Then $\overline{\Im f} =
+			V(\Ker \varphi).$
+	\end{enumerate}
+\end{exer}
+\begin{proof}
+	We already have that $\overline F$ must already be of the form $V(I')$
+	with $I' \subset I$. Since $V(I')$ must be the minimal such set, we have
+	$I' = I$.\\
+
+	For part (b) we assume that $A$ and $B$ are reduced, since that doesn't
+	affect their prime spectra. Then the previous part implies that
+	$\overline{\Im f} = V(\bigcap_{\mathfrak p \in \Spec A} \varphi^{-1}
+	(\mathfrak p)) = V(\Ker \varphi)$.
+\end{proof}
+In the case where $B = A_{\mathfrak p}$ for some $\mathfrak p \in \Spec A$,
+this is the set of ideals that are "large enough" to interact with
+$\mathfrak p$. In geometric terms, they are the irreducible varieties such that
+every function that vanishes on $V(\mathfrak p)$ vanishes here as well.\\
+
+\begin{exer}
+	Let $X$ be a scheme and $f \in \Sh_X(X)$. Then the map
+	$U \mapsto f|_U \Sh_X(U)$ for every affine open subset $U$ defines a
+	sheaf of ideals on $X$, denoted $f\Sh_X$. In addition, $\Supp f\Sh_X$ is
+	closed.
+\end{exer}
+\begin{proof}
+	It is easy to see that $f\Sh_X$ inherits the uniqueness condition from
+	$\Sh_X$. On the other hand, suppose that we have an open set $U$ of $X$,
+	an affine open cover $\{ U_i \}$ of $U$, and a family of sections
+	$f|_{U_i}s_i$ that agrees on intersections. Then we may glue these into
+	a section $s$ of $\Sh_X(U)$ that restricts to $f_{U_i}s_i$ on every
+	$U_i$, which we contest is contained in $f\Sh_X(U)$. Indeed, suppose
+	that $s$ is not in this ideal. Then for any $a \in \Sh_X(U)$, there is
+	some $x \in U$ such that $s_x - (af)_x \neq 0$, but this contradicts the
+	fact that $f|_{U_i}s_i$ is in $f\Sh_X(U)$.\\
+
+	To see that $\Supp f\Sh_X$ is closed, observe that $\Supp f\Sh_X$ is
+	just the set of $x \in X$ such that $f_x \neq 0$. Since the complement
+	is open, the statement holds.
+\end{proof}
+
+\begin{exer}
+	Let $Y$ be a scheme such that $\Mor(X,Y) \cong \Hom(\Sh_Y(Y),\Sh_X(X))$
+	for any affine scheme $X$. Then $Y$ is affine.
+\end{exer}
+\begin{proof}
+	Regrettably, the easiest proof I could come up with was by categoryslop.
+	Observe that for any affine scheme $Z$, we have $\Mor(Z,Y) \cong
+	\Hom(\Sh_Y(Y),\Sh_Z(Z)) \cong \Mor(Z,\Spec(\Sh_Y(Y)))$. This extends to
+	the category of all schemes in the obvious way, so $Y$ is a representing
+	object of $\Mor(-,\Spec(\Sh_Y(Y))$ and is thus isomorphic to
+	$\Spec(\Sh_Y(Y))$.
+\end{proof}
