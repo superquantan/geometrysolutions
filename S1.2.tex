@@ -57,3 +57,29 @@
 \begin{proof}
 	Consider $\QQ$ as a module over $\ZZ_{(p)}$.
 \end{proof}
+
+\begin{exer}
+	Let $I$ be an ideal of a ring $A$. Then the following are equivalent:
+	\begin{enumerate}[label=(\alph*)]
+		\item $A/I$ is flat over $A$.
+		\item $I^2 = I$
+		\item There is an element $e \in I$ such that $e^2 = e$ and
+			$eA = I$.
+	\end{enumerate}
+\end{exer}
+\begin{proof}
+	\begin{description}[leftmargin=*,font=\normalfont]
+		\item[((i)$\Rightarrow$(ii))]
+			Consider the exact sequence $0 \to I \to A \to A/I \to
+			0$. Since $A/I$ is flat, we have another exact sequence
+			$0 \to A/I \to A/I^2 \to 0$, so $I = I^2$.
+		\item[((ii)$\Rightarrow$(iii))]
+			I don't know how to do this morally. The easy way out
+			is to use the form of Nakayama's Lemma proven by the
+			determinant trick.
+		\item[((iii)$\Rightarrow$(i))]
+			Observe that in any maximal ideal, $I$ either localizes
+			to $(0)$ or $(1)$. In any case, it's flat at every
+			maximal ideal, hence flat overall.
+	\end{description}
+\end{proof}
