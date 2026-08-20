@@ -224,3 +224,30 @@ changed to reflect that.
 
 	Parts (b) and (c) are easy, but somewhat annoying to write out.
 \end{proof}
+
+\begin{exer}
+	Let $k$ be a field and $A$ be a finitely generated $k$-algebra.
+	\begin{enumerate}[label=(\alph*)]
+		\item Suppose in addition that $A$ is a finite over $k$.
+			Then $\Spec A$ is a finite set, with cardinality
+			bounded above by $\dim_k A$. Furthermore, every prime
+			ideal of $A$ is maximal.
+		\item The cardinality of $\Spec(k[T_1,\ldots,T_d])$ is infinite
+			when $d \geq 1$.
+		\item The set $\Spec A$ is finite iff $A$ is finite over $k$.
+	\end{enumerate}
+\end{exer}
+\begin{proof}
+	For part (a), the second statement is obvious. To prove the first one,
+	let $\{a_1,\ldots,a_n\}$ be a basis for $A$ over $k$. We see that there
+	is a family of maximal ideals $\mathfrak m_1,\ldots,\mathfrak m_n$,
+	where $\mathfrak m_i$ is the largest ideal not containing $a_i$. If
+	$\mathfrak m$ is any other maximal ideal, there is some $i$ such that
+	$a_i \not\in \mathfrak m$, so $\mathfrak m = \mathfrak m_i$.\\
+
+	In (b), it suffices to prove it when $d = 1$. In this case, it's just
+	Euclid's proof of the infinitude of primes.\\
+
+	Part (c) follows from parts (a) and (b) after an easy application of
+	Noether normalization.
+\end{proof}
