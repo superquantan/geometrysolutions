@@ -109,3 +109,25 @@ Let $X$ be a topological space.
 	isomorphisms on the stalks, so it is an isomorphism. We can say this is
 	equality because the isomorphism is sufficiently special.
 \end{proof}
+
+\begin{exer}
+	Let $\mathcal B$ be a base of open subsets for a topological space $X$.
+	Let $\mathcal F, \mathcal G$ be two sheaves on $X$. Suppose that for
+	every $U \in \mathcal B$, there is a homomorphism
+	$\alpha(U): \mathcal F(U) \to \mathcal G(U)$ which is compatible with
+	restrictions. Then there is a unique extension $\alpha: \mathcal F \to
+	\mathcal G$ to a homomorphism of sheaves. Moreover, if $\alpha(U)$ is
+	surjective (resp. injective) for every $U \in \mathcal B$, then $\alpha$
+	is surjective (resp. injective).
+\end{exer}
+\begin{proof}
+	Let $U$ be any open set and $s$ a section of $\mathcal F$ over $U$. If
+	$\{U_i\}$ is a cover of $U$ by elements of $\mathcal B$, we have a
+	corresponding family $\{s_i\}$ of sections of $\mathcal F$ given by
+	restrictions of $s$. Since $\alpha$ is compatible with restrictions, we
+	obtain a family $\{\alpha(U_i)(s_i)\}$ that agrees on intersections,
+	which reglues into a section $\alpha(s)$ of $\mathcal G$. It is easy to
+	see that this is a morphism of sheaves, and the uniqueness of this
+	extension follows from the uniqueness of gluing. The statement about
+	surjectivity and injectivity is obvious.
+\end{proof}
