@@ -88,3 +88,24 @@ Let $X$ be a topological space.
 \begin{proof}
 	I think I'm missing something because this seems really immediate
 \end{proof}
+
+\begin{exer}
+	Let $f: X \to Y, g: Y \to Z$ be continuous maps, $\mathcal F$ a sheaf on
+	$X$ and $\mathcal H$ a sheaf on $Z$. Then
+	\[
+		f^{-1}(g^{-1}\mathcal H) = (g \circ f)^{-1}\mathcal H,\,
+		g_*(f_*\mathcal F) = (g \circ f)_*\mathcal F.
+	\]
+\end{exer}
+\begin{proof}
+	The second part is obvious. For the first one, notice that the
+	assignment
+	\[
+		\mathcal F \mapsto \left(U \mapsto
+			\varprojlim_{V \supseteq f(U)}\mathcal F(U)\right)
+	\]
+	is functorial, so we have a morphism $f^{-1}(g^{-1}\mathcal H) \to
+	(g \circ f)^{-1}\mathcal H$. It is easy to check that this restricts to
+	isomorphisms on the stalks, so it is an isomorphism. We can say this is
+	equality because the isomorphism is sufficiently special.
+\end{proof}
