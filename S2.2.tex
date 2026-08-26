@@ -131,3 +131,26 @@ Let $X$ be a topological space.
 	extension follows from the uniqueness of gluing. The statement about
 	surjectivity and injectivity is obvious.
 \end{proof}
+
+\begin{exer}
+	Let $\{U_i\}$ be an open covering of $X$. Suppose we are given a family
+	of sheaves $\mathcal F_i$ on $U_i$ and isomorphisms $\phi_{ij}:
+	{\mathcal F_i|}_{U_i \cap U_j} \to {\mathcal F_j|}_{U_i \cap U_j}$ such
+	that $\phi_{ik} = \phi_{jk} \circ \phi_{ij}$ on $U_i \cap U_j \cap U_k$ 
+	and $\phi{ii} = 1_{\mathcal F_i}$. Then there is a unique sheaf
+	$\mathcal F$ on $X$ with isomorphisms $\psi_i: {\mathcal F|}_{U_i} \to
+	\mathcal F_i$ such that $\psi_j = \phi_{ij} \circ \psi_i$ on $U_i \cap
+	U_j$.
+\end{exer}
+\begin{proof}
+	The sheaf $\mathcal F$ is quite simple in its definition. For any open
+	subset $V$ of $X$, we define a section of $\mathcal F(V)$ to be a family
+	$\{s_i\}$ such that $s_i \in \mathcal F_i(V \cap U_i)$ and ${s_i|}_{V
+	\cap U_i \cap U_j} = \phi_{ji}({s_j|}_{V \cap U_i \cap U_j})$ for all
+	$i,j$. It is easy to see that this defines a sheaf, and the existence of
+	the desired isomorphisms is clear. To see that it is unique, let
+	$\mathcal G$ be another such sheaf, and denote the isomorphisms
+	${\mathcal G|}_{U_i} \to \mathcal F_i$ by $\psi'$. Then we have a family
+	of isomorphisms ${\mathcal G|}_{U_i} \to {\mathcal F|}_{U_i}$, which
+	we may glue to an isomorphism $\mathcal G \to \mathcal F$.
+\end{proof}
