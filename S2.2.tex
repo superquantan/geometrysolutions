@@ -154,3 +154,17 @@ Let $X$ be a topological space.
 	of isomorphisms ${\mathcal G|}_{U_i} \to {\mathcal F|}_{U_i}$, which
 	we may glue to an isomorphism $\mathcal G \to \mathcal F$.
 \end{proof}
+
+\begin{exer}
+	Let $\mathcal F$ be a sheaf on $X$ whose support $Y$ is a finite set of
+	closed points $y$. Then for any open set $U$ of $X$, $\mathcal F =
+	\oplus_{x \in U \cap Y} \mathcal F_x$.
+\end{exer}
+\begin{proof}
+	Let $U$ be an open subset of $X$ meeting $Y$ at only a single point $y$.
+	Then for any open neighborhood $V$ of $y$ contained in $U$, we have $U
+	= (U \setminus \{y\}) \cup V$. Since $\mathcal F(U \setminus \{y\}) =
+	0$, the value of any section $s \in \mathcal F(U)$ is determined by its
+	restriction to $V$, hence by its stalk at $y$. The statement now follows
+	from an easy gluing argument.
+\end{proof}
