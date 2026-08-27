@@ -79,3 +79,45 @@ $(T,t)$ are $(0)$ and $(T)$.
 	The first and third statements are clear, and the second one follows
 	from the third.
 \end{proof}
+
+\begin{exer}
+	Let $A$ be a ring and $X$ be a scheme.
+	\begin{enumerate}[label=(\alph*)]
+		\item The following properties are equivalent:
+			\begin{enumerate}[label=(\roman*)]
+				\item $X$ is connected;
+				\item $\Sh_X(X)$ has no idempotent elements
+					other than $1$;
+				\item $\Spec(\Sh_X(X))$ is connected.
+			\end{enumerate}
+		\item Any local scheme is connected.
+		\item Suppose that the connected components of $X$ are open. Let
+			$U$ be a connected component of $X$. Then there is a
+			unique idempotent element $e$ of $\Sh_X(X)$ such that
+			${e|}_U = 1$ and ${e|}_{X \setminus U} = 0$. This
+			establishes a canonical bijection from the set of
+			connected components of $X$ onto the set of
+			indecomposable idempotent elements of $\Sh_X(X)$, the
+			inverse map being given by $e \mapsto V(1-e)$.
+	\end{enumerate}
+\end{exer}
+\begin{proof}
+	For part (a), let $e \neq 1 \in \Sh_X(X)$ be an idempotent element. At
+	any point $x \in X$, $e_x$ must also be idempotent, so generates an
+	ideal $(e_x)$ that squares to itself. If $e_x \neq 1$, Nakayama's lemma
+	implies that it is $0$. We see that the sets $U = \{x \in X: e_x = 1\}$
+	and $V = \{x \in X: e_x = 0\}$ are disjoint and form an open cover of
+	$X$, so (i) implies (ii).\\
+
+	On the other hand, suppose that $U,V$ are disjoint open sets that cover
+	$\Spec(\Sh_X(X))$. Then there is an element of $\Sh_X(X)$ that restricts
+	to $0$ on $U$ and $1$ on $V$. It is clearly idempotent and not equal to
+	$1$, so (ii) implies (iii).\\
+
+	Finally, suppose that $X$ is disconnected. Then the same argument as in
+	part (ii) implies that there is an idempotent $e \neq 1 \in \Sh_X(X)$,
+	hence $\Spec(\Sh_X(X))$ is disconnected and so (a) follows.\\
+
+	Part (b) follows from the same reasoning as part (a)(ii), and part (c)
+	is obvious.
+\end{proof}
