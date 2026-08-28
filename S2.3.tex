@@ -108,5 +108,22 @@ every function that vanishes on $V(\mathfrak p)$ vanishes here as well.\\
 	image of $f_i$ in $k(x) = k$.
 \end{exer}
 \begin{proof}
-	I think this is obvious, but I might be missing something.
+	The statement is obvious if you draw a picture:
+	\[\begin{tikzcd}
+						  &  X \arrow[dl,shift left]
+						       \arrow[dd,"f"]
+						  & & &
+					       & \Sh_X(X) \ar[dl,shift right,
+						  "x'"']
+						  \\
+		\Spec k \ar[ur,shift left,"x"] &{}&
+						\ar[r, Leftrightarrow]
+					       &{}&
+						 k \ar[ur,shift right]
+						    \ar[dr]&\\
+						 & \Aff_k^n \arrow[ul]
+						 & & &
+					       & k[T_1,\ldots,T_n]
+						  	\ar[uu,"\varphi"]
+	\end{tikzcd}\]
 \end{proof}
