@@ -108,7 +108,8 @@ every function that vanishes on $V(\mathfrak p)$ vanishes here as well.\\
 	image of $f_i$ in $k(x) = k$.
 \end{exer}
 \begin{proof}
-	The statement is obvious if you draw a picture:
+	The statement is obvious if you draw a picture and use the universal
+	property of affine schemes:
 	\[\begin{tikzcd}
 						  &  X \arrow[dl,shift left]
 						       \arrow[dd,"f"]
@@ -119,11 +120,36 @@ every function that vanishes on $V(\mathfrak p)$ vanishes here as well.\\
 		\Spec k \ar[ur,shift left,"x"] &{}&
 						\ar[r, Leftrightarrow]
 					       &{}&
-						 k \ar[ur,shift right]
-						    \ar[dr]&\\
+						 k \ar[ur,shift right] \ar[dr]&
+						 \\
 						 & \Aff_k^n \arrow[ul]
 						 & & &
 					       & k[T_1,\ldots,T_n]
 						  	\ar[uu,"\varphi"]
 	\end{tikzcd}\]
 \end{proof}
+
+\begin{exer}
+	Let $X$ be a scheme over a ring $A$. Let $f_0,\ldots,f_n \in \Sh_X(X)$
+	be such that the $f_{i,x}$ generate the unit ideal of $\Sh_{X,x}$ for
+	all $x \in X$. Then $X$ is the union of the $X_{f_i}$. Moreover,
+	there is a morphism $f: X \to \Prs^n_A$ such that $f^{-1}(D_+(T_i)) =
+	X_{f_i}$ and ${f|}_{X_{f_i}}$ is induced by the homomorphism
+	$A[T_i^{-1}T_j]_j \to \Sh_X(X_{f_i})$ given by $T_i^{-1}T_j \mapsto
+	f_i^{-1}f_j$.
+\end{exer}
+\begin{proof}
+	Let $x \in X$ be any point. Since the $f_{i,x}$ generate the unit ideal,
+	there is $j$ such that $f_{j,x}$ is not contained in the maximal ideal
+	at $x$, so $x \in X_{f_j}$. On the other hand, we have a homomorphism
+	$A[T_0,\ldots,T_n] \to \Sh_X(X)$ given by $T_i \mapsto f_i$. This gives
+	rise to a homomorphism $A[T_i^{-1}T_j]_j \to \Sh_X(X)_{f_i} \cong
+	\Sh_X(X_{f_i})$ for any $i$, hence a morphism $X_{f_i} \to D_+(T_i)$. We
+	contest that this agrees on intersections. Indeed, observe that for any
+	$i,j$, the morphisms $X_{f_i} \to D_+(T_i)$ and $X_{f_j} \to D_+(T_j)$,
+	when restricted to $X_{f_if_j} = X_{f_i} \cap X_{f_j}$,
+	both factor through $D_+(T_i) \cap D_+(T_j) = D_+(T_iT_j)$; it is then
+	clear that they agree, so we have the desired morphism $X \to \Prs^n_A$.
+\end{proof}
+
+Note: I omitted the last part of 2.3.8 because it is the same as 2.3.7.
