@@ -4,6 +4,18 @@
 \usepackage[baskervaldx]{newtxmath}
 \usepackage{enumitem}
 \usepackage{tikz-cd}
+\usepackage[hidelinks]{hyperref}
+\usepackage{mathtools}
+
+\makeatletter
+\DeclareMathSymbol{\safe@colon}{\mathpunct}{operators}{"3A}
+\newcommand{\custom@math@colon}{\safe@colon\,}
+\begingroup
+\catcode`\:=\active
+\gdef:{\ifmmode\custom@math@colon\else\char"3A \fi}
+\endgroup
+\AtBeginDocument{\mathcode`\:=\string"8000}
+\makeatother
 
 \let\Im\relax
 
