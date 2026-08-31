@@ -1,0 +1,47 @@
+\subsection{The technique of base change}
+
+\begin{exer}
+	Let $S$, $X$, and $Y$ be sets, and equip $X$ (resp. $Y$) with a map
+	$\varphi: X \to S$ (resp. $\psi\colon Y \to S$). Let
+	$p: X \times_S Y \to X$ and $q: X \times_S Y \to Y$ be the
+	restrictions of the projections from $X \times Y$. Then for any set $Z$,
+	equipped with a pair of maps $f: Z \to X$ and $g: Z \to Y$
+	such that $\phi \circ f = \psi \circ g$, there is a unique map
+	$(f,g)_S: Z \to X \times_S Y$ such that $p \circ (f,g)_S = f$ and
+	$q \circ (f,g)_S = g$.
+\end{exer}
+\begin{proof}
+	The existence (but perhaps not the uniqueness) of $(f,g)_S$ is clear, so
+	suppose that $h: Z \to X \times_S Y$ is such that $p \circ h = f$
+	and $q \circ h = g$. Then for all $z \in Z$, $h(x) = (p(h(x)),q(h(x)))
+	= (f(x),g(x)) = (f,g)_S(x)$ and so $h = (f,g)_S$.
+\end{proof}
+
+\begin{exer}
+	Let $f: X \to Y$ be a morphism of schemes. For any scheme $T$, let
+	$f(T): X(T) \to Y(T)$ denote the map defined by $f(T)(g) =
+	f \circ g$. Then $f(T)$ is bijective for every $T$ if and only if
+	$f$ is an isomorphism.
+\end{exer}
+\begin{proof}
+	Yoneda
+\end{proof}
+
+\begin{exer}
+	Let $f: X \to Y$ be a dominant morphism of irreducible schemes. Then
+	the generic fiber of $f$ is dense in $X$.
+\end{exer}
+\begin{proof}
+	Let $\zeta_X$ and $\zeta_Y$ be the generic points of $X$ and $Y$,
+	respectively. Then Proposition 1.16 implies that $\zeta_X$ is in the
+	generic fiber, so it is dense.
+\end{proof}
+
+\begin{exer}
+	Let $f: X \to Y$ be a morphism of affine schemes. Then for any affine
+	open subscheme $V$ of $Y$, $f^{-1}(V)$ is affine.
+\end{exer}
+\begin{proof}
+	Just recall that $f^{-1}(V) = X \times_Y V$, so is affine.
+\end{proof}
+

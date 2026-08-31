@@ -121,3 +121,43 @@ $(T,t)$ are $(0)$ and $(T)$.
 	Part (b) follows from the same reasoning as part (a)(ii), and part (c)
 	is obvious.
 \end{proof}
+
+\begin{exer}
+	The underlying topological space of a scheme is a Kolmogorov space.
+\end{exer}
+\begin{proof}
+	It suffices to show the statement for affine schemes, so let $X$ be an
+	affine scheme and let $x$ and $y$ be distinct points of $X$. If
+	$\Ide_x \subset \Ide_y$, $X \setminus V(\Ide_y)$ is a neighborhood of
+	$x$ not containing $y$. Otherwise, suppose there is no inclusion
+	relation between $\Ide_x$ and $\Ide_y$. Then there is some $f
+	\in \Ide_x$ such that $f \not\in \Ide_y$, so $D(f)$ is a neighborhood of
+	$y$ not containing $x$.
+\end{proof}
+
+\begin{exer}
+	A quasicompact scheme has a closed point.
+\end{exer}
+\begin{proof}
+	Let $X$ be a scheme with a finite cover $\{U_i\}$ by affine opens
+	(assuming no inclusion relation between the $U_i$) and suppose that
+	$x \in U_1$ is a closed point in $U_1$ (but not necessarily in $X$!).
+	If $x$ is a closed point in $X$, we are done; otherwise, there is
+	another affine open in the cover, say $U_2$, such that
+	$\overline{\{x\}}$ meets $U_2$ at a point other than $x$. It is clear
+	that $\overline{\{x\}}$ contains a closed point of $U_2$ which is not
+	contained in $U_1$. Continuing this process will give the desired point.
+\end{proof}
+
+\begin{exer}
+	Let $X$ be a noetherian scheme. Then the set of points such that
+	$\Sh{X,x}$ is reduced (resp. is an integral domain) is open.
+\end{exer}
+\begin{proof}
+	First, assume $X$ is the prime spectrum of a noetherian ring. Denote by
+	$N$ the nilradical of $\Sh_X(X)$, and let $f_1,\ldots,f_n$ be
+	generators of $N$. Then for any $x \in X$, $\Sh_{X,x}$ is reduced only
+	if $\Ann(f_i)$ is not contained in $\Ide_x$ for all $i$, i.e. only if
+	$x \in D(f_1f_2\ldots f_n)$. An easy gluing argument gives the statement
+	for general $X$.
+\end{proof}
