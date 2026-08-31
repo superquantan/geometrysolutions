@@ -168,3 +168,24 @@ Let $X$ be a topological space.
 	restriction to $V$, hence by its stalk at $y$. The statement now follows
 	from an easy gluing argument.
 \end{proof}
+
+\begin{exer}
+	Let $(X,\Sh_X)$ be a ringed space. Let $Y$ be a subset of $X$ endowed
+	with the induced topology. Let $i: Y \hookrightarrow X$ denote the
+	canonical inclusion. Then $(Y,i^{-1}\Sh_X)$ is a ringed space.
+\end{exer}
+\begin{proof}
+	For any point $y \in Y$, we have
+	\[
+		(i^{-1}\Sh_X)_y = \varinjlim_{y \in U}
+			((U' \mapsto 
+				\varinjlim_{i(U')\subseteq V}
+					\Sh_X(V))^\dagger)(U).
+	\]
+	Since the stalks of the sheafification of a presheaf are the same as the
+	stalks of the presheaf itself, we can simplify this to
+	\[
+		\varinjlim_{y \in U} \varinjlim_{i(U) \subseteq V} \Sh_X(V).
+	\]
+	It is easy to see that this is just the stalk of $i(y)$ in $X$.
+\end{proof}
