@@ -1,0 +1,30 @@
+\subsection{Applications to algebraic varieties}
+
+\begin{exer}
+	Let $Y$ be a noetherian scheme. Then any $Y$-scheme $X$ of finite type
+	is noetherian. Moreover, if $Y$ is of finite dimension, then so is $X$.
+\end{exer}
+\begin{proof}
+	The first part is clear, but I will add details because my teachers
+	always yell at me for lack of rigor. Let $\{Y_i\}$ be a finite open
+	cover of $Y$ by noetherian affines. If $f: X \to Y$ is the structural
+	morphism, we have a finite cover $\{X_{ij}\}$ of $X$ by open affines,
+	with $X_{ij} \subseteq f^{-1}(Y_i)$ for all $i$, $j$. Since each
+	$\Sh_X(X_{ij})$ is a finite type algebra over $\Sh_Y(Y_i)$, a noetherian
+	ring, $X$ is noetherian. Finally, the dimensions of the $\Sh_X(X_{ij})$
+	are all finite if $Y$ is finite dimensional by Corollary 2.5.17.
+\end{proof}
+
+\begin{exer}
+	Any open immersion into a locally noetherian scheme is of finite type.
+\end{exer}
+\begin{proof}
+	Let $f: X \to Y$ be an open immersion into a locally noetherian scheme
+	$Y$. It is quasi-compact by Exercise 2.3.17(b), so it suffices to show
+	that the restriction homomorphisms are of finite type, for which the
+	affine noetherian case is enough. Let $Y = \Spec A$ for $A$ noetherian.
+	Let $U = Y \setminus V(I)$ be an affine open subset of $Y$. Since $I$ is
+	finitely generated, say by $f_1, \ldots, f_n$, the sets $D(f_1), \ldots,
+	D(f_n)$ form a finite open cover of $U$, and it is now easy to see that
+	$\Sh_Y(U)$ is of finite type over $A$.
+\end{proof}
