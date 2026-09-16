@@ -322,3 +322,21 @@ Note: I omitted the last part of 2.3.8 because it is the same as 2.3.7.
 
 	Part (e) follows from the same accumulation point argument.
 \end{proof}
+
+\begin{exer}
+	Let $X$ be an affine algebraic variety over a field $k$. There is a
+	projective variety $\overline{X}$ over $k$ such that $X$ is isomorphic
+	to a dense open subscheme of $\overline{X}$.
+\end{exer}
+\begin{proof}
+	Let $X = \Spec A = \Spec k[T_1,\ldots,T_n]/I$. It is easy to see that
+	embeds as a closed subscheme of $D_+(T_0) \subseteq \Prs^n_k$, so let
+	$J$ be the kernel of the corresponding ring homomorphism
+	$k[T_0^{-1}T_1,\ldots,T_0^{-1}T_n] \to A$. We may extend $J$ to a
+	homogeneous ideal $J' = k[T_0,\ldots,T_n,T_0^{-1}]J \cap
+	k[T_0,\ldots,T_n]$, so we have a projective variety $V_+(J')$. We
+	contest that $D_+(T_0)$ is dense in $V_+(J')$. Indeed, let $P$ be any
+	homogeneous polynomial in $k[T_0,\ldots,T_n]\setminus\sqrt{J'}$. Then
+	$D_+(P) \cap D_+(T_0) \cap V_+(J') = D_+(T_0P) \cap V_+(J')$, which is
+	nonempty since $J'$ is not maximal (it does not contain $T_0$).
+\end{proof}
