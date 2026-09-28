@@ -340,3 +340,73 @@ Note: I omitted the last part of 2.3.8 because it is the same as 2.3.7.
 	$D_+(P) \cap D_+(T_0) \cap V_+(J') = D_+(T_0P) \cap V_+(J')$, which is
 	nonempty since $J'$ is not maximal (it does not contain $T_0$).
 \end{proof}
+
+\begin{exer}
+	Let $K$ be a number field with ring of integers $\Dvr_K$. Then every
+	open subset of $\Spec \Dvr_K$ is principal.
+\end{exer}
+\begin{proof}
+	I don't know what a class group is.
+\end{proof}
+
+In the next exercise I kind of cheat by using genuine algebra results.
+
+\begin{exer}
+	Let $A$ be a ring, $G$ a finite group of automorphisms of $A$. Let
+	$p: \Spec A \to \Spec A^G$ denote the morphism induced by the inclusion
+	$A^G \to A$.
+	\begin{enumerate}[label=(\alph*)]
+		\item There is a natural action of $G$ on $\Spec A$. If $x_1$
+			and $x_2$ are points of $\Spec A$ such that $p(x_1) =
+			p(x_2)$, then there is some $\sigma \in G$ such that
+			$\sigma x_1 = x_2$.
+		\item The inclusion $A^G \to A$ is an integral extension and
+			$p$ is surjective.
+		\item Let $a \in A$. Let $P(T) = \prod_{\sigma \in G}
+			(T - \sigma a) \in A^G[T]$ and write $P(T) = T^d +
+			\sum_{i \leq d - 1}b_iT^i$, $b_i \in A^G$. Then
+			$p(D(a))$ = $\bigcup D(b_i)$ and $p$ is an open map.
+		\item For any $b \in A^G$, we have $p^{-1}(D(b)) = D(bA)$ and
+			$(A^G)_b = (A_b)^G$. Let $V$ be an open subset of
+			$\Spec A^G$. Then $G$ acts on $p^{-1}(V)$ and
+			$\Sh_{\Spec A^G}(V) = \Sh_{\Spec A}(p^{-1}(V))^G$.
+	\end{enumerate}
+\end{exer}
+\begin{proof}
+	We begin by proving that $A$ is integral over $A^g$. Let $f \in A$ be
+	any element and consider the polynomial $P(T) = \prod_{\sigma \in G}
+	(T - \sigma f)$. It is easy to see that $P(T)$ has coefficients in
+	$A^G$ and that $f$ is a zero, so $A$ is integral over $A^G$. That $p$
+	surjective follows from Exercise 1.8(a).
+
+	We now attack part (a), following \cite{algebra}, VII.2.1. That $G$ acts
+	on $\Spec A$ is just a consequence of the functoriality of $\Spec$. Let
+	$\mfr{p}_1$ and $\mfr{p}_2$ be prime ideals of $A$ lying above some
+	common prime ideal $\mfr{q}$ of $A^G$. Localizing by $\mfr{q}$, we may
+	assume $\mfr{q}$, hence $\mfr{p}_1$ and $\mfr{p}_2$ by Exercise 1.8(a),
+	maximal. Suppose that $\sigma \mfr{p}_1 \neq \mfr{p}_2$ for all
+	$\sigma \in G$. Then for all $\sigma, \tau \in G$, $\sigma \mfr{p}_1
+	\neq \tau \mfr{p}_2$. Since these are all maximal ideals, the Chinese
+	remainder theorem implies that there is $x \in A$ such that for all
+	$\sigma \in G$, 
+	\[
+		x \equiv 1 \pmod {\sigma \mfr{p}_1}\\
+		x \equiv 0 \pmod {\sigma \mfr{p}_2}.
+	\]
+	Note that $\prod_{\sigma \in G} \sigma x$ is in $A^G$, so it must be in
+	$\mfr{q}$. However, $\sigma x \not\in \mfr{p}_1$ for all $\sigma$,
+	contradiction.\\
+
+	In part (c), just observe that any prime ideal $\mfr{p}$ of $A$ that
+	does not contain $a$ must not contain at least one of the $b_i$,
+	otherwise $a^d = \sum_{i \leq d-1} -b_ia^i$ is an element of $\mfr{p}$.
+	\\
+
+	Finally, the first two statements of part (d) are obvious. For the last
+	two, notice that part (a) implies that $G$ acts on $p^{-1}(V)$, with the
+	fibers as the orbits. Suppose that $V = \bigcup_i D(b_i)$. Then
+	$\Sh_{\Spec A}(p^{-1}(V))$ inherits an action of $G$ by its action on
+	each of the $\Sh_{\Spec A}(b_iA)$. A section $s$ of
+	$(\Sh_{\Spec A}(p^{-1}(V)))^G$ must then be fixed by $G$ in each of the
+	restrictions to $\Sh_{\Spec A}(D(b_iA))$, hence in $\Sh_{\Spec A^G}(V)$.
+\end{proof}

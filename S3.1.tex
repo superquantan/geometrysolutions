@@ -57,3 +57,50 @@
 	$\dim Y = \trdeg_k B$. The usual sorites of tensor products give the
 	result.
 \end{proof}
+
+\begin{exer}
+	Let $\pi: T \to S$ be a morphism of schemes. Assume that $\pi$ is either
+	an open immersion, closed immersion, or that $S = \Spec A$ and $\pi$ is
+	induced by a localization $A \to F^{-1}A$ for a multiplicative set $F
+	\subset A$.
+	\begin{enumerate}[label=(\alph*)]
+		\item Let $f$,$g: Z \to T$ be two morphisms of schemes such that
+			$\pi \circ f = \pi \circ g$. Then $f = g$.
+		\item Let $X$, $Y$ be $T$-schemes. Then the canonical morphism
+			$\varphi: X \times_T Y \to X \times_S Y$ is an
+			isomorphism.
+		\item Part (b) is not always true when $\pi$ is not a
+			monomorphism.
+	\end{enumerate}
+\end{exer}
+\begin{proof}
+	It is clear that $\pi$ is a monomorphism, so (a) is immediate. For
+	(b), recall that for any scheme $Z$, $(X \times_T Y)(Z) =
+	X(Z) \times_{T(Z)} Y(Z)$ and similarly for $(X \times_S Y)(Z)$. It then
+	suffices to prove the statement for sets, in which case the statement
+	is clear. Finally, let $S = \Spec \FF_2$, $T = \Spec \ZZ$, and $X = Y =
+	\Spec \ZZ[T]$. Then $X \times_T Y = \Spec \ZZ[T_1,T_2]$ and $X \times_S
+	Y = \Spec \FF_2[T_1,T_2]$, which are clearly not isomorphic.
+\end{proof}
+
+\begin{exer}
+	Let $X$, $Y$ be $S$-schemes, $p$ and $q$ the projection morphisms from
+	$X \times_S Y$ to $X$ and $Y$. Fix $s \in S$. Then for any $x \in X_s$
+	and $y \in Y_s$, there is a natural homeomorphism
+	\[
+		\Spec(\kappa(x) \otimes_{\kappa(s)} \kappa(y))
+		\to Z = \{z \in X \times_S Y | p(z) = x,\, q(z) = y\}.
+	\]
+\end{exer}
+\begin{proof}
+	Consider the fibered product
+	$X \times_S Y \times_S \Spec \kappa(s) \times_X \Spec \kappa(x)
+	\times_Y \kappa(y)$. It is easy to see that this is isomorphic to
+	$(X_s \times_S Y_s) \times_X \Spec \kappa(x) \times_Y \Spec \kappa(y)$.
+	and homeomorphic to $Z$. Since the morphism out of $\Spec \kappa(x)$
+	factors through $X_s$, we have that this product is isomorphic to $Y_s
+	\times_S \Spec \kappa(x) \times_Y \Spec \kappa(y).$ Similar reasoning
+	means that this product is then isomorphic to $\Spec \kappa(x) \times_S
+	\Spec \kappa(y)$. Finally, these both factor through $\Spec \kappa(s)$,
+	so the product is just $\Spec(\kappa(x) \otimes_{\kappa(s)} \kappa(y))$.
+\end{proof}

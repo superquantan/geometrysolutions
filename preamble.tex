@@ -1,7 +1,12 @@
 \documentclass{article}
-\usepackage{Baskervaldx}
+\usepackage{kmath,kerkis}
+\usepackage[T1]{fontenc}
+\let\openbox\relax
+\let\iint\relax
+\let\iiint\relax
+\let\iiiint\relax
+\let\idotsint\relax
 \usepackage{amsthm}
-\usepackage[baskervaldx]{newtxmath}
 \usepackage{enumitem}
 \usepackage{tikz-cd}
 \usepackage[hidelinks]{hyperref}
@@ -24,11 +29,13 @@
 \newcommand*\QQ{\mathbf{Q}}
 \newcommand*\RR{\mathbf{R}}
 \newcommand*\CC{\mathbf{C}}
+\newcommand*\FF{\mathbf{F}}
 \newcommand*\Aff{\mathbf{A}}
 \newcommand*\Prs{\mathbf{P}}
 \newcommand*\Sh{\mathcal{O}}
 \newcommand*\Dvr{\mathcal{O}}
 \newcommand*\Ide{\mathfrak{j}}
+\newcommand*\mfr[1]{\mathfrak{#1}}
 
 \DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\Mor}{Mor}

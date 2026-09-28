@@ -28,3 +28,90 @@
 	D(f_n)$ form a finite open cover of $U$, and it is now easy to see that
 	$\Sh_Y(U)$ is of finite type over $A$.
 \end{proof}
+
+\begin{exer}
+	Recall that an immersion of schemes is a closed immersion followed by an
+	open immersion (shut up Hartshorne).
+	\begin{enumerate}[label=(\alph*)]
+		\item Let $f: X \to Y$ be a morphism which is an open immersion
+			followed by a closed immersion. Then $f$ is an
+			immersion.
+		\item A quasicompact immersion may be decomposed into an open
+			immersion followed by a closed immersion.
+		\item The composition of two immersions is an immersion.
+		\item A morphism $f: X \to Y$ is an immersion if and only if $f$
+			is a topological immersion and if for all $x \in X$, the
+			canonical morphism $f^\sharp_x: \Sh_{Y,f(x)} \to
+			\Sh_{X,x}$.
+	\end{enumerate}
+\end{exer}
+\begin{proof}
+	It is clear that the stalk maps of $f$ are surjective and that $f(X)$ is
+	locally closed, so let $U \subset Y$ be the smallest open set containing
+	$f(X)$. It is clear that $f$ factors through the open immersion $U \to
+	Y$.\\
+
+	Now, let $f: X \to Y$ be a quasicompact immersion. Taking the
+	scheme-theoretic image, we see that $f$ factors as
+	\begin{tikzcd} X \ar[r,"g"] & Z \ar[r,"j"] & Y \end{tikzcd} for some
+	closed immersion $j$ with $g(X)$ dense in $Z$. Let $U$ be the largest
+	open subscheme of $Y$ such that $f(X)$ is closed in $U$. Then $Z \cap U$
+	is a closed subscheme of $U$, and $X \to Z \cap U$ is an isomorphism.\\
+
+	Part (c) follows from part (a), and part (d) is evident.
+\end{proof}
+
+\begin{exer}
+	Let $X$, $Y$ be schemes over a locally noetherian scheme $S$, with $Y$
+	of finite type over $S$. Let $x \in X$ For any morphism of $S$-schemes
+	$f_x: \Spec \Sh_{X,x} \to Y$, there exists an open subset $U \ni x$ of
+	$X$ and a morphism of $S$-schemes $f: U \to Y$ such that $f_x = f \circ
+	i_x$, where $i_x: \Spec \Sh_{X,x} \to U$ is the canonical morphism.
+\end{exer}
+\begin{proof}
+	This is a local statement, so we may as well assume that everything is
+	affine. Then the morphism $f_x$ is of the form $({}^a\varphi,
+	\tilde{\varphi})$, where $\varphi: \Sh_Y(Y) \to \Sh_{X,x}$ is the
+	induced $\Sh_S(S)$-algebra homomorphism. Since $\Sh_Y(Y)$ is of finite
+	type over $\Sh_S(S)$, $\varphi$ is determined by its values on a finite
+	number of elements $T_1, \ldots, T_n$. The noetherian
+	hypothesis means that $\Sh_Y(Y) = A[T_1, \ldots, T_n]/(f_1,\ldots,f_m)$
+	for some collection of $f_i$, so there is $g \in \Sh_X(X) \setminus
+	\Ide_x$ such that $\varphi(f_i)g = 0$ for all $i$. If $\varphi(T_i) =
+	\frac{a_i}{b_i}$ for all $i$, we see that $D(b_1\cdots b_nd) \subseteq
+	X$ is our desired open subset.
+\end{proof}
+
+\begin{exer}
+	Let $X$, $Y$ be finite type schemes over a locally noetherian scheme
+	$S$. Fixing some point $s \in S$, suppose we have a morphism
+	$f: X \times_S \Spec \Sh_{S,s} \to Y \times_S \Spec \Sh_{S,s}$. Then
+	there is an open neighborhood $U \ni s$ and a morphism
+	$f': X \times_S U \to Y \times_S U$ such that $f'_{\Spec \Sh_{S,s}}=f$.
+	Moreover, if $f$ is an isomorphism, we may choose $f'$ to be an
+	isomorphism.
+\end{exer}
+\begin{proof}
+	We may as well assume $S$ is affine. Then $X$ and $Y$ are noetherian.
+	Suppose for now that both $X$ and $Y$ are affine. That $f$ can be
+	extended in this case follows from basically the same argument as in the
+	previous exercise. The isomorphism part is also clear here.\\
+
+	Now, suppose that $X$ is not affine. We may take a finite open covering
+	$\{X_i\}_i$ of $X$ by affine subschemes, and so the previous paragraph
+	gives a family of morphisms $f_i: X_i \times_S U \to Y \times_S U$ for
+	some fixed $U$, which we will assume is a principal open $D(a)$ of $S$.
+	Let $X_{ij} = X_i \cap X_j$ for some pair $i,j$ and consider the pair of
+	morphisms $g,h: X_{ij} \times_S U \to Y \times_S U$ given by the
+	different factorizations. Writing $B$ for $\Sh_X(X_{ij})$, we have a
+	pair of $A$-algebra homomorphisms $\varphi,\psi: C_a \to B_a$. These
+	clearly agree upon localizing at $s$, so let $c_1,\ldots,c_n$ be
+	generators for $C$. Then there is, for every $i$, $a_i \in A \setminus
+	\Ide_s$ such that $\varphi(c_i) = a_i\psi(c_i)$. Localizing by
+	$aa_1\cdots a_n$ makes $\varphi$ and $\psi$ agree, and the finitude
+	of the covering of $X$ allows us to restrict repeatedly until we get the
+	desired morphism.\\
+
+	I am not sure how to proceed when $Y$ is not affine, but I will think
+	about it more later.
+\end{proof}
